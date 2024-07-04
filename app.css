@@ -220,17 +220,19 @@ styles
    justify-content: space-between;
    align-items: center;
    max-width: 200px;
-   height: 45px;
    margin-top: 15px;
 }
 
 .modal__addtocartbtn {
    width: 100%;
-   padding: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .modal__addtocartbtn,
 .modal__btn {
+   height: 45px;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -247,7 +249,6 @@ styles
 }
 
 .modal__btn {
-   height: 100%;
    width: 45px;
 }
 
