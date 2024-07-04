@@ -1,16 +1,60 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" href="app.css">
 </head>
+
 <body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <h1>Logo</h1>
+                    <div class="cart">
+                        <img src="./assets/icons/cart.svg" alt="Cart">
+                        <span class="cart__badge cart__badge-hide" id="cartBadge">1</span>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-<main class="container">
-    
-</main>
+        <main class="main">
+            <div class="container">
+                <div class="row" id="productsRow">
+                    <div class="col">
+                        <div class="card">
+                            <img class="card__img" src="./assets/images/image-1.webp" alt="Product image" />
+                            <span class="card__title">Паприка Kotanyi</span>
+                            <p class="card__desc">
+                                Копченая молотая имеет интенсивно пряный сладковатый
+                                вкус и аромат костра. Интенсивный цвет паприки проявляется при смешивании с растительным
+                                маслом
+                            </p>
+                            <button class="card__detail">
+                                Подробнее
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
 
-<script defer src="app.js"></script>
+        <footer class="footer">
+            <div class="container">
+                <h3>Footer</h3>
+            </div>
+        </footer>
+    </div>
+
+    <div id="modalContainer">
+    </div>
+
+    <script defer src="data.js"></script>
+    <script defer src="app.js"></script>
 </body>
+
 </html>

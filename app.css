@@ -1,3 +1,257 @@
 /**
 styles
 **/
+
+:root {
+   --primar-color: rgb(224, 224, 224);
+   --border-color: rgb(228, 228, 228);
+   --border-radius: 8px;
+   --animation-duration: 0.3s;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;
+   color: inherit;
+   text-decoration: none;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+}
+
+.header {
+   border-bottom: 1px solid var(--border-color);
+}
+
+.header__inner {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 15px 0px;
+}
+
+.cart {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   height: 40px;
+}
+
+.cart__badge {
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 20px;
+   height: 20px;
+   border-radius: 15px;
+   background-color: var(--primar-color);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 12px;
+}
+
+.cart__badge-hide {
+   display: none;
+}
+
+.main {
+   flex: 1 0 auto;
+   margin: 30px 0px;
+}
+
+.footer {
+   flex: 0 0 auto;
+   padding: 15px 0px;
+   border-top: 1px solid var(--border-color);
+}
+
+.container {
+   margin: 0 auto;
+   padding: 0px 15px;
+   max-width: 1290px;
+}
+
+.row {
+   display: flex;
+   flex-wrap: wrap;
+   margin: -7.5px;
+}
+
+.col {
+   display: block;
+   flex: 0 0 50%;
+   max-width: 50%;
+   padding: 7.5px;
+}
+
+@media (min-width: 480px) {
+   .col {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+   }
+}
+
+@media (min-width: 1024px) {
+   .col {
+      flex: 0 0 25%;
+      max-width: 25%;
+   }
+}
+
+.card {
+   border: 1px solid var(--border-color);
+   border-radius: var(--border-radius);
+   padding: 15px;
+}
+
+.card__img {
+   object-fit: contain;
+   width: 100%;
+}
+
+.card__title {
+   font-size: 16px;
+   font-weight: bold;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 1;
+}
+
+.card__desc {
+   margin-top: 5px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2;
+}
+
+.card__detail {
+   font-size: 16px;
+   margin-top: 10px;
+   width: 100%;
+   border: none;
+   border-radius: var(--border-radius);
+   background-color: var(--primar-color);
+   padding: 12px;
+   cursor: pointer;
+   transition: transform var(--animation-duration) ease;
+}
+
+.card__detail:active {
+   transform: scale(0.95);
+}
+
+
+.modal {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.3);
+   padding: 0px 15px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.modal__content {
+   max-width: 1000px;
+   background-color: white;
+   border-radius: var(--border-radius);
+   padding: 15px;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 15px;
+}
+
+@media (min-width: 480px) {
+   .modal__content {
+      flex-wrap: nowrap;
+   }
+}
+
+.modal__imgwrap {
+   flex: 1 0 40%;
+}
+
+.modal__img {
+   width: 100%;
+   max-height: 400px;
+   object-fit: contain;
+}
+
+
+.modal__product {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.modal__productinfo {
+   display: flex;
+   flex-direction: column;
+}
+
+
+.modal__title {
+   font-size: 24px;
+   font-weight: bold;
+}
+
+.modal__desc {
+   margin-top: 10px;
+   font-size: 18px;
+}
+
+.modal__actions {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   max-width: 200px;
+   height: 45px;
+   margin-top: 15px;
+}
+
+.modal__addtocartbtn {
+   width: 100%;
+   padding: 10px;
+}
+
+.modal__addtocartbtn,
+.modal__btn {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   border: none;
+   border-radius: var(--border-radius);
+   background-color: var(--primar-color);
+   transition: transform var(--animation-duration) ease;
+}
+
+.modal__addtocartbtn:active,
+.modal__btn:active {
+   transform: scale(0.95);
+}
+
+.modal__btn {
+   height: 100%;
+   width: 45px;
+}
+
+.modal__cartcount {
+   font-size: 18px;
+   font-weight: bold;
+}
